@@ -30,8 +30,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.example.android.movie.data.MovieContract;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

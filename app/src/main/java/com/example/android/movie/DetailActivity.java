@@ -29,7 +29,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.bumptech.glide.Glide;
-import com.example.android.movie.data.MovieContract;
 
 import java.text.DateFormat;
 import java.text.ParseException;
