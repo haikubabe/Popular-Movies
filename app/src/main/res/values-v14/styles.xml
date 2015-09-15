@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darkcyan</item>
+        <item name="colorPrimaryDark">@color/cyan</item>
+        <item name="android:actionBarStyle">@style/MyStyledActionBar</item>
+    </style>
+
+   <style name="MyStyledActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+       <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+   </style>
+
+    <style name="MyActionBarTitleText" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <!-- Settings activity theme -->
+    <style name="SettingsTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBar.V14.Movie.NoTitle</item>
+    </style>
+
+    <!-- Settings Activity Action Bar styles -->
+    <style name="ActionBar.V14.Movie.NoTitle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/darkcyan</item>
+        <item name="android:height">56dp</item>
+    </style>
+
+</resources>
