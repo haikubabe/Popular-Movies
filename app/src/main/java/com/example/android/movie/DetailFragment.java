@@ -8,9 +8,13 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -20,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -50,6 +55,7 @@ public class DetailFragment extends Fragment {
     private static final int DETAIL_LOADER = 0;
     private static final String MESSAGE = "MovieDetails";
     private static final String REVIEW_MESSAGE = "ReviewDetails";
+    private static final String MOVIE_SHARE_HASHTAG = "#MovieApp";
     static final String DETAIL_URI = "URI";
     public String REVIEW_URL, VIDEO_URL, URL;
     public String id, review, trailer, runtime, genre, key;
@@ -118,7 +124,6 @@ public class DetailFragment extends Fragment {
             moviePoster = (ImageView) rootView.findViewById(R.id.movie_poster);
             String basepath = "http://image.tmdb.org/t/p/w185/";
             String relativePath = jObj.getString(OWM_POSTER);
-
             Glide.with(getActivity()).load(basepath + relativePath).into(moviePoster);
 
             movieRating = (TextView) rootView.findViewById(R.id.movie_rating);
@@ -192,7 +197,6 @@ public class DetailFragment extends Fragment {
             } catch (ParseException e) {
                 Log.e(LOG_TAG, "Error Parsing Date: ", e);
             }
-
 
             movieReview = (TextView) rootView.findViewById(R.id.review);
             //movieTrailer = (TextView) rootView.findViewById(R.id.trailer);
