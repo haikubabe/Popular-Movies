@@ -142,6 +142,10 @@ public class DetailFragment extends Fragment {
             movieReleaseDate = (TextView) rootView.findViewById(R.id.movie_release_date);
             movieReleaseDate.setText(jObj.getString(OWM_RELEASE_DATE));
 
+            if (jObj.getString(OWM_RELEASE_DATE) == "null") {
+                movieReleaseDate.setText(Html.fromHtml("<small>Release Date is not found</small>"));
+            }
+
             movieGenres = (TextView) rootView.findViewById(R.id.genres);
 
             /*JSONArray jArray = jObj.getJSONArray(OWM_GENRE_ID);
